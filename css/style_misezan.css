@@ -1,0 +1,189 @@
+/* 全体 */
+.wrap {
+    width: 1200px;
+    margin: auto;
+}
+
+
+/* ヘッダー */
+.header {
+    display: flex;
+    justify-content: space-between; /* 子要素を横幅いっぱいに等間隔に配置 */
+    align-items: center;
+}
+
+.header img {
+    width: 10%;
+    height: auto;
+}
+
+.header p {
+    font-size: 48px;
+}
+
+.header ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header li {
+    margin-left: 30px;    /* listのテキストどうしの間隔調整 */
+}
+
+.header a {
+    text-decoration: none;    /* aタグのリンクの下線を消す */
+    color: #000000;   /* aタグのリンクの色を変える */
+    font-size: 24px;
+}
+
+
+/* ルール */
+
+.about-section {
+    max-width: 1200px;
+    text-align: left;
+    margin: 0 auto;
+    color: #000;
+}
+
+.about-section h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.about-section h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.about-section p {
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-indent: 3em;
+}
+
+.about-section h2 {
+	position: relative;
+	padding: 0.5em 0.75em;
+	border: solid 1px #27acd9;
+	border-left: solid 2.5em #27acd9;
+}
+
+h2:before {
+	position: absolute;
+	/* content: "\f0eb"; */
+	font-weight: 900;
+	color: #fff;
+	padding: 0;
+	left: -1.6em;
+	top: 50%;
+}
+
+
+
+/* 計算練習 */
+
+.training-section {
+    max-width: 1200px;
+    text-align: left;
+    margin-top: 90px;
+    color: #000;
+}
+
+.training-section h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.training-section h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.training-section h2 {
+	position: relative;
+	padding: 0.5em 0.75em;
+	border: solid 1px #27acd9;
+	border-left: solid 2.5em #27acd9;
+}
+
+h2:before {
+	position: absolute;
+	/* content: "\f0eb"; */
+	font-weight: 900;
+	color: #fff;
+	padding: 0;
+	left: -1.6em;
+	top: 50%;
+}
+
+.button-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 60px);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    input {
+      width: 80px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+.button-grid2 {
+      display: grid;
+      grid-template-columns: repeat(5, 60px);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    button #answer-btn2 {
+      padding: 10px;
+      font-size: 16px;
+    }
+    input #input3 #input4 {
+      width: 80px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+
+#result {
+  margin-top: 20px;
+}
+
+#reason {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#result2 {
+  margin-top: 20px;
+}
+
+#how {
+  margin-top: 20px;
+}
+
+#reason2 {
+  margin: 20px auto;
+}
+
+
+/* footer */
+.footer {
+  background: #27acd9;
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 140px;
+}

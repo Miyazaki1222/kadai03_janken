@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>見せ算学習</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style_misezan.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="header">
+        <img src="img/logo.jpg" alt="ロゴ">
+        <p>見せ算学習</p>
+        <ul>
+          <li><a href="#about">ルール</a></li>
+          <li><a href="#training">計算練習</a></li>
+        </ul>
+    </header>
+
+    <div class="content">
+        <section id="about"></section>
+        <div class="about-section">
+            <h1>ルール</h1>
+            <h2 class="rule-1">基本ルール</h2>
+            <p>見せ算は、数字と数字を見せ合わせて、どう思うか、という計算方法です。</p>
+            <p>その計算結果のことを「眼（がん）」と呼びます。</p><br>
+            <p>①同じ数字どうしを見せした場合、眼は「0」になります。</p>
+            <p>（例：「2👀2 = 0」「3👀3 = 0」）</p>
+            <p>人間で言うと同じ服装の人が前から歩いてきたみたいな状況です。</p>
+            <p>お互い恥ずかしくなってその場から立ち去ります。</p><br><br>
+            <p>②違う数字どうしを見せした場合、眼は大きい方の数字になります。</p>
+            <p>（例：「7👀5 = 7」「3👀5 = 5」）</p>
+            <p>自分より大きい人を見ると怖くなって逃げ出してしまいます。</p><br><br>
+
+            <h2 class="rule-2">応用ルール</h2>
+            <p>④6👀9の眼は11になります。理由は、お互い自分だと思って近づくから。</p><br>
+            <p>⑤2👀5の眼は1.1になります。理由は、近づいて全然違うことにびっくりして携帯を落とすから。</p><br>
+            <p>⑥1👀100の眼は83になります。理由は、1が頑張って一人で17人倒すから。</p>
+        </div>
+        
+        <section id="training"></section>
+        <div class="training-section">
+        <h1>計算練習</h1>
+          <h2 class="training">見せ算</h2>
+            <div class="button-grid" id="number-buttons"></div>
+              <h3>数字を選んでください</h3>
+                <input type="text" id="input1" placeholder="n">
+                <input type="text" id="input2" placeholder="m">
+                <button id="answer-btn">答え</button>
+             <p id="result">結果：</p>
+              <p id="reason">理由：</p>
+          <h2 class="training">見せ算＋四則演算　ランダム</h2>
+            <div class="button-grid2" id="number-buttons2"></div>
+              <h3>数字を選んでください</h3>
+                <input type="text" id="input3" placeholder="n">
+                <input type="text" id="input4" placeholder="m">
+                <button id="answer-btn2">答え</button>
+              <p id="how">何算：</p>
+              <p id="result2">結果：</p>
+              <p id="reason2">理由：</p>
+        </div>
+
+    </div>
+    <!-- /.content -->
+
+
+    <div class="footer">
+          copyrights 20XX Sayaka All RIghts Reserved.
+    </div>
+    <!-- /#footer -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/misezan.js"></script>
+
+</body>
+</html>
+
