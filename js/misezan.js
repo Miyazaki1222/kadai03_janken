@@ -129,3 +129,28 @@
     document.getElementById('reason2').textContent = `理由：「${reason2}」です`;
   });
 // ランダム計算用　ここまで↑↑↑
+
+
+// バナーラベル管理
+  document.addEventListener("DOMContentLoaded", () => {
+  const banners = document.querySelectorAll(".banner");
+
+  banners.forEach(banner => {
+    const label = banner.querySelector(".label");
+    const id = banner.dataset.id;
+
+    // ページ読み込み時に状態を反映
+    const status = localStorage.getItem(`bannerStatus_${id}`);
+    if (status === "閲覧済み") {
+      label.textContent = "閲覧済み";
+      label.classList.add("viewed");
+    }
+
+    // クリックイベント
+    banner.addEventListener("click", () => {
+      label.textContent = "閲覧済み";
+      label.classList.add("viewed");
+      localStorage.setItem(`bannerStatus_${id}`, "閲覧済み");
+    });
+  });
+});
