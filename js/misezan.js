@@ -8,6 +8,16 @@
   ⑤n===1 m===100 または　n===1000 m===1 の眼は「83」
 */
 
+
+
+// ハンバーガー
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 // 見せ算用　ここから↓↓↓
   // メモ：変数作成
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 100];

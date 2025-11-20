@@ -4,13 +4,22 @@ body {
 }
 
 
+
+
 .wrap {
-    width: 1200px;
+    /* width: 1200px; */
     margin: auto;
 }
 
+@media screen and (max-width: 640px) {
+  .wrap {
+    width: 100%;
+    margin: auto;
+}
+}
 
 /* ヘッダー */
+
 .header {
     display: flex;
     justify-content: space-between; /* 子要素を横幅いっぱいに等間隔に配置 */
@@ -27,21 +36,86 @@ body {
     font-size: 48px;
 }
 
-.header ul {
+.ul {
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-.header li {
+.li {
     margin-left: 30px;    /* listのテキストどうしの間隔調整 */
 }
 
-.header a {
+.a {
     text-decoration: none;    /* aタグのリンクの下線を消す */
     color: #000000;   /* aタグのリンクの色を変える */
     font-size: 24px;
 }
+
+
+@media screen and (max-width: 640px) {
+.header img {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+}
+.header p {
+    font-size: 36px;
+}
+}
+
+
+/* ハンバーガーボタンはPCでは非表示 */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* スマホ用レスポンシブ */
+@media screen and (max-width: 640px) {
+  .menu-toggle {
+    display: block; /* ハンバーガーボタンを表示 */
+  }
+
+  .nav-links {
+    display: none; /* 初期状態では非表示 */
+    flex-direction: column;
+    background: #f0f0f0;
+    position: absolute;
+    top: 60px; /* headerの下に配置 */
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex; /* ボタンで切り替え */
+  }
+}@media screen and (max-width: 640px) {
+  .menu-toggle {
+    display: block; /* スマホで表示 */
+  }
+
+  .nav-links {
+    display: none; /* 初期状態では非表示 */
+    flex-direction: column;
+    background: #f0f0f0;
+    position: absolute;
+    top: 60px; /* headerの下に配置 */
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex; /* ボタンで切り替え */
+  }
+}
+
+
 
 /* メインビジュアル */
 .mv {
@@ -60,6 +134,25 @@ body {
 }
 
 
+@media screen and (max-width: 640px) {
+  .mv {
+  display: flex;
+  background: url(../img/mv.png) no-repeat center center/contain;
+  height: 240px;
+  justify-content: center;
+  align-items: end;
+}
+.mv-text {
+  font-size: 20px;
+  color:#27acd9;
+  text-emphasis: circle #4d9bc1;
+  text-emphasis-position: under;
+  padding-bottom: 20px;
+}
+}
+
+
+
 /* ルール */
 
 .about-section {
@@ -73,13 +166,12 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: #000;
-    margin-top: 60px;
-    margin-bottom: 30px;
+    margin: 60px 5px 30px;
 }
 
 .about-section h2 {
     font-size: 18px;
-    margin-bottom: 16px;
+    margin: 0px 5px 16px;
 }
 
 .about-section p {
@@ -106,13 +198,20 @@ h2:before {
 }
 
 
+@media screen and (max-width: 640px) {
+.about-section p {
+    text-indent: 0em;
+    margin-left: 0.5em;
+}
+}
+
 
 /* 計算練習 */
 
 .training-section {
     max-width: 1200px;
     text-align: left;
-    margin-top: 90px;
+    margin: 90px auto 0px;
     color: #000;
 }
 
@@ -120,12 +219,12 @@ h2:before {
     font-size: 24px;
     font-weight: bold;
     color: #000;
-    margin-bottom: 30px;
+    margin: 0px 5px 30px;
 }
 
 .training-section h2 {
     font-size: 18px;
-    margin-bottom: 16px;
+    margin: 0px 5px 16px;
 }
 
 .training-section h2 {
@@ -133,6 +232,10 @@ h2:before {
 	padding: 0.5em 0.75em;
 	border: solid 1px #27acd9;
 	border-left: solid 2.5em #27acd9;
+}
+
+.training-section h3 {
+	margin: 0px 5px;
 }
 
 h2:before {
@@ -149,16 +252,17 @@ h2:before {
       display: grid;
       grid-template-columns: repeat(5, 60px);
       gap: 10px;
-      margin-bottom: 20px;
+      margin: 0px 5px 20px;
     }
     button {
       padding: 10px;
       font-size: 16px;
+      margin: 0px 5px;
     }
     input {
       width: 80px;
       font-size: 16px;
-      margin-right: 10px;
+      margin: 0px 10px 0px 5px;
     }
 
 .button-grid2 {
@@ -179,24 +283,23 @@ h2:before {
 
 
 #result {
-  margin-top: 20px;
+  margin: 20px 5px 0px;
 }
 
 #reason {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 5px 20px;
 }
 
 #result2 {
-  margin-top: 20px;
+  margin: 20px 5px 0px;
 }
 
 #how {
-  margin-top: 20px;
+  margin: 20px 5px 0px;
 }
 
 #reason2 {
-  margin: 20px auto;
+  margin: 20px 5px 0px;
 }
 
 
